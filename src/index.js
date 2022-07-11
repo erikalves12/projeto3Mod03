@@ -9,6 +9,8 @@ const app = express();
 
 connectDatabase();
 app.use(cors());
+app.use(express.json());
+
 app.use("/users", userRoute);
 
 app.listen(port, () => {
